@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="60 seconds"
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<contextName>foundation-web</contextName>
+	<property name="log.path" value="${user.home}/work/logs/foundation-web" />
+	<property name="log.max.size" value="100MB" />
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+	</appender>
+
+	<appender name="debug"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/debug.log</File> <!-- 设置日志不超过${log.max.size}时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/debug.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<!-- 当天的日志大小 超过${log.max.size}时,压缩日志并保存 -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>DEBUG</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="info"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/info.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/info.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="warn"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/warn.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/warn.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>WARN</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/error.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/error.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+	
+	<appender name="mail" class="ch.qos.logback.classic.net.SMTPAppender">
+		<smtpHost>smtp.sina.com</smtpHost>
+		<username>invinciblegg@sina.com</username>
+		<password>XXXXXXXX</password>
+		<ssl>true</ssl>
+		<from>invinciblegg@sina.com</from>
+		<to>417650332@qq.com,invinciblegg@sina.com</to>
+		<subject>Log4J提醒您：系统发生ERROR。</subject>
+		<asynchronousSending>true</asynchronousSending>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+		</layout>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<!-- web模块的test目录下的日志 -->
+	<appender name="webTest"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/web.test.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/web.test.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<!-- web模块的controller层日志 -->
+	<appender name="webController"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/web.controller.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/web.controller.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<!-- web模块的service层日志 -->
+	<appender name="webService"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/web.service.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/web.service.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<!-- core模块的service层日志 -->
+	<appender name="coreService"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/core.service.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/core.service.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<!-- core模块的dao层日志 -->
+	<appender name="coreDao"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/core.dao.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/core.dao.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<!-- common模块的utils层日志 -->
+	<appender name="commonUtils"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${log.path}/common.utils.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss a} [ %thread ] [ %logger %method:%L]%n [ %p ]: %msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.path}/common.utils.%d{yyyy-MM-dd}.%i.log.gz
+			</FileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${log.max.size}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="lq.web.controller" level="DEBUG" additivity="false">
+		<appender-ref ref="webController" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="lq.web.service" level="DEBUG" additivity="false">
+		<appender-ref ref="webService" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="lq.core.service" level="DEBUG" additivity="false">
+		<appender-ref ref="coreService" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="lq.core.dao" level="DEBUG" additivity="false">
+		<appender-ref ref="coreDao" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="lq.common.utils" level="DEBUG" additivity="false">
+		<appender-ref ref="commonUtils" />
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="lq.test" level="DEBUG" additivity="false">
+		<appender-ref ref="webTest" />
+		<appender-ref ref="console" />
+		<appender-ref ref="mail" />
+		<appender-ref ref="mailA" />
+	</logger>
+
+	<!-- 设置框架日志级别，不打印出debug -->
+	<logger name="org.springframework" level="OFF" />
+	<logger name="org.apache.ibatis" level="OFF" />
+	<logger name="org.mybatis.spring" level="OFF" />
+	<logger name="org.apache.ibatis" level="OFF" />
+
+	<!-- 排除了上面子节点所打印的日志 -->
+	<root>
+		<!-- <priority value="DEBUG" /> -->
+		<level value="DEBUG" />
+		<appender-ref ref="console" />
+		<appender-ref ref="debug" />
+		<appender-ref ref="info" />
+		<appender-ref ref="warn" />
+		<appender-ref ref="error" />
+	</root>
+
+</configuration>

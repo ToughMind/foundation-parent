@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lq.core.mapper.UserPOMapper">
+	<!--设置PO类和数据库中表的字段一一对应，注意若数据库字段和PO类中的字段名称不致，一定要声明以下内容！ -->
+	<resultMap id="UserMap" type="UserPO">
+		<id column="id" property="id" javaType="long" jdbcType="INTEGER" />
+		<result column="name" property="name" javaType="String" jdbcType="VARCHAR" />
+		<result column="price" property="price" javaType="double" jdbcType="DOUBLE" />
+		<result column="createTime" property="createTime" javaType="long" jdbcType="INTEGER" />
+		<result column="updatTime" property="updatTime" javaType="String" jdbcType="VARCHAR" />
+		<result column="money" property="money" javaType="double" jdbcType="DOUBLE" />
+		<result column="status" property="status" typeHandler="lq.core.domain.bo.enums.EnumIntegerTypeHandler" />
+	</resultMap>
+	
+	<select id="getById" parameterType="long" resultMap="UserMap">
+		SELECT * FROM user WHERE id = #{id}
+	</select>
+	
+	<select id="queryAll" resultMap="UserMap">
+		SELECT * FROM user;
+	</select>
+	
+	<insert id="insert" parameterType="UserPO" useGeneratedKeys="true" keyColumn="id">  
+       INSERT INTO user (name,status,createTime,price,updateTime,money) values(#{name}, #{status.value}, #{createTime}, #{price}, #{updateTime}, #{money})  
+    </insert>  
+     
+    <delete id="delete" parameterType="long">  
+       DELETE FROM user where id = #{id}  
+    </delete>  
+    
+    <update id="updateStatusById" parameterType="map">  
+    	UPDATE user SET status = #{status.value} WHERE id = #{id}   
+    </update>
+	
+</mapper>  

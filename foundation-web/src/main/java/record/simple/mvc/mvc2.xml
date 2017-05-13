@@ -1,0 +1,9 @@
+<mvc>
+	<actions>
+		<action name="show" class="record.simple.mvc.action.ShowList">
+			<result name="toShow">
+				/WEB-INF/mvc/show.jsp
+			</result>
+		</action>
+	</actions>
+</mvc>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<description>定义受环境影响易变的变量</description>
+
+	<!-- 开发环境 -->
+	<beans profile="dev">
+		<context:property-placeholder order="1"
+			ignore-unresolvable="true" ignore-resource-not-found="true"
+			file-encoding="UTF-8"
+			location="classpath*:/config/dev/core.properties,classpath*:/config/dev/db.properties" />
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+			<property name="driverClassName" value="${jdbc_driver}" />
+			<property name="url" value="${jdbc_url}" />
+			<property name="username" value="${jdbc_username}" />
+			<property name="password" value="${jdbc_password}" />
+		</bean>
+	</beans>
+
+	<!-- 测试环境 -->
+	<beans profile="test">
+		<context:property-placeholder order="1"
+			ignore-unresolvable="true" ignore-resource-not-found="true"
+			file-encoding="UTF-8"
+			location="classpath*:/config/test/core.properties,classpath*:/config/test/db.properties" />
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+			<property name="driverClassName" value="${jdbc_driver}" />
+			<property name="url" value="${jdbc_url}" />
+			<property name="username" value="${jdbc_username}" />
+			<property name="password" value="${jdbc_password}" />
+		</bean>
+	</beans>
+
+	<!-- 线上环境 -->
+	<beans profile="online">
+		<context:property-placeholder order="1"
+			ignore-unresolvable="true" ignore-resource-not-found="true"
+			file-encoding="UTF-8"
+			location="classpath*:/config/online/core.properties,classpath*:/config/online/db.properties" />
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+			<property name="driverClassName" value="${jdbc_driver}" />
+			<property name="url" value="${jdbc_url}" />
+			<property name="username" value="${jdbc_username}" />
+			<property name="password" value="${jdbc_password}" />
+		</bean>
+	</beans>
+
+	<!-- 预发布环境 -->
+	<beans profile="release">
+		<context:property-placeholder order="1"
+			ignore-unresolvable="true" ignore-resource-not-found="true"
+			file-encoding="UTF-8"
+			location="classpath*:/config/release/core.properties,classpath*:/config/release/db.properties" />
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+			<property name="driverClassName" value="${jdbc_driver}" />
+			<property name="url" value="${jdbc_url}" />
+			<property name="username" value="${jdbc_username}" />
+			<property name="password" value="${jdbc_password}" />
+		</bean>
+	</beans>
+
+</beans>

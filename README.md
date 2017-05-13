@@ -1,2 +1,10 @@
-# foundation-parent
-基于maven多模块划分架构，记录java和web相关的基础技术
+## 基于maven多模块划分架构，记录java和web相关的基础技术。maven父工程，涵盖所有项目的子模块。
+- parent工程负责整个项目的整合。其打包格式是pom，指定了maven plugin的版本以及需要发布编译的文件结构。
+
+- common工程是公共模块。大部分公共jar包都在此声明，如spring mvc、spirng、mybatis、json等。对于项目的公共方法和工具类也打算放于此，比如处理字符串、处理时间、http请求工具类等。
+
+- core工程与数据持久层相关。包含一些数据连接池相关jar包，包含所有数据持久层操作，只涉及数据，最好无关业务。
+
+- web工程是典型的java web项目，主要进行与web相关的操作（业务操作），也记录一些与web操作相关的基础，包括仿照struts的mvc模式的实现等。
+
+- java工程是典型的java项目，记录一些很基础的java知识，包括数据结构、集合操作、设计模式的实现源码等。

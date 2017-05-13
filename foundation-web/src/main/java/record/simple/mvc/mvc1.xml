@@ -1,0 +1,12 @@
+<mvc>
+	<actions>
+		<action name="list" class="record.simple.mvc.action.ListString">
+			<result name="toListJSP">
+				/WEB-INF/mvc/list.jsp
+		    </result>
+			<result name="toShow" type="redirect">
+				show.do
+			</result>
+		</action>
+	</actions>
+</mvc>
