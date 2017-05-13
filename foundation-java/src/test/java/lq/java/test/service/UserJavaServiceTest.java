@@ -18,7 +18,7 @@ public class UserJavaServiceTest extends BaseTest {
 	@Autowired
 	private UserJavaService userJavaService;
 	
-	@Test
+	//@Test
 	public void queryAll() {
 		List<UserVO> list = userJavaService.queryAll();
 		long cur = System.currentTimeMillis();
@@ -26,13 +26,13 @@ public class UserJavaServiceTest extends BaseTest {
 		System.err.println(System.currentTimeMillis() - cur);
 	}
 	
-	@Test
+	//@Test
 	public void getById() {
 		UserVO vo = userJavaService.getById(7);
 		System.err.println(JSON.toJSONString(vo));
 	}
 	
-	@Test
+	//@Test
 	public void insert() {
 		UserVO vo = new UserVO();
 		vo.setCreateTime(System.currentTimeMillis());
@@ -44,7 +44,7 @@ public class UserJavaServiceTest extends BaseTest {
 		System.err.println("insert:" + userJavaService.insert(vo));
 	}
 	
-	@Test
+	//@Test
 	public void delete() {
 		System.err.println("delete:" + userJavaService.delete(2));
 	}

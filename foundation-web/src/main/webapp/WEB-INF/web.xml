@@ -7,7 +7,7 @@
 	<!-- 自己手写struts实现源码 -->
 	<servlet>
 		<servlet-name>ActionServlet</servlet-name>
-		<servlet-class>record.simple.mvc.entity.ActionServlet</servlet-class>
+		<servlet-class>lq.record.simple.mvc.entity.ActionServlet</servlet-class>
 		<init-param>
 			<param-name>configFile</param-name>
 			<param-value>mvc1.xml,mvc2.xml</param-value>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="刘泉">
+
+  <title>Bootstrap 网格系统</title>
+
+  <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../stylesheets/theme.css">
+  <link rel="stylesheet" type="text/css" href="../../lib/font-awesome/css/font-awesome.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- jQuery -->
+  <script src="../../lib/jquery-1.11.1.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body class="theme-blue">
+  <style type="text/css">
+    .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+      color: #fff;
+    }
+  </style>
+
+  <div class="navbar navbar-default" role="navigation">    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">bootstrap控件</a>
+    </div>  
+    <!-- Top Menu Items -->
+    <div class="navbar-collapse collapse" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i>
+            liuquan
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">
+                <i class="fa fa-fw fa-user"></i>
+                LOGIN OUT
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>    
+  </div>
+
+  <div class="sidebar-nav">
+    <ul>
+      <li>
+        <a href="javascript:;" class="nav-header collapsed" data-toggle="collapse" data-target="#css">
+          <i class="fa fa-fw fa-list"></i>
+          Bootstrap CSS
+          <i class="fa fa-collapse"></i>
+        </a>
+      </li>
+      <li>
+        <ul id="css" class="nav nav-list collapse in">
+          <li>
+            <a href="../css/gridSystem.html"><span class="fa fa-caret-right"></span>Bootstarp 网格系统</a>
+          </li>
+          <li>
+            <a href="../css/layout.html"><span class="fa fa-caret-right"></span>Bootstarp 排版</a>
+          </li>
+          <li>
+            <a href="../css/code.html"><span class="fa fa-caret-right"></span>Bootstarp 代码</a>
+          </li>
+          <li>
+            <a href="../css/table.html"><span class="fa fa-caret-right"></span>Bootstarp 表格</a>
+          </li>
+          <li>
+            <a href="../css/form.html"><span class="fa fa-caret-right"></span>Bootstarp 表单</a>
+          </li>
+          <li>
+            <a href="../css/button.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮</a>
+          </li>
+          <li>
+            <a href="../css/picture.html"><span class="fa fa-caret-right"></span>Bootstarp 图片</a>
+          </li>
+          <li>
+            <a href="../css/assist.html"><span class="fa fa-caret-right"></span>Bootstarp 辅助类</a>
+          </li>
+          <li>
+            <a href="../css/responsiveTool.html"><span class="fa fa-caret-right"></span>Bootstarp 响应式实用工具</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="javascript:;" class="nav-header collapsed" data-toggle="collapse" data-target="#layout">
+          <i class="fa fa-fw fa-list"></i>
+          Bootstrap 布局组件
+          <i class="fa fa-collapse"></i>
+        </a>
+        <ul id="layout" class="nav nav-list collapse">
+          <li>
+            <a href="../layout/font.html"><span class="fa fa-caret-right"></span>Bootstarp 字体图标</a>
+          </li>
+          <li>
+            <a href="../layout/dropdown.html"><span class="fa fa-caret-right"></span>Bootstarp 下拉菜单</a>
+          </li>
+          <li>
+            <a href="../layout/button.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮组</a>
+          </li>
+          <li>
+            <a href="../layout/buttonDropdown.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮下拉菜单</a>
+          </li>
+          <li>
+            <a href="../layout/input.html"><span class="fa fa-caret-right"></span>Bootstarp 输入框组</a>
+          </li>
+          <li>
+            <a href="../layout/navElement.html"><span class="fa fa-caret-right"></span>Bootstarp 导航元素</a>
+          </li>
+          <li>
+            <a href="../layout/navbar.html"><span class="fa fa-caret-right"></span>Bootstarp 导航栏</a>
+          </li>
+          <li>
+            <a href="../layout/breadcrumbs.html"><span class="fa fa-caret-right"></span>Bootstarp 面包屑导航</a>
+          </li>
+          <li>
+            <a href="../layout/pagination.html"><span class="fa fa-caret-right"></span>Bootstarp 分页</a>
+          </li>
+          <li>
+            <a href="../layout/label.html"><span class="fa fa-caret-right"></span>Bootstarp 标签</a>
+          </li>
+          <li>
+            <a href="../layout/badges.html"><span class="fa fa-caret-right"></span>Bootstarp 徽章</a>
+          </li>
+          <li>
+            <a href="../layout/jumbotron.html"><span class="fa fa-caret-right"></span>Bootstarp 超大屏幕</a>
+          </li>
+          <li>
+            <a href="../layout/pageHeader.html"><span class="fa fa-caret-right"></span>Bootstarp 页面标题</a>
+          </li>
+          <li>
+            <a href="../layout/thumbnail.html"><span class="fa fa-caret-right"></span>Bootstarp 缩略图</a>
+          </li>
+          <li>
+            <a href="../layout/alerts.html"><span class="fa fa-caret-right"></span>Bootstarp 警告</a>
+          </li>
+          <li>
+            <a href="../layout/progress.html"><span class="fa fa-caret-right"></span>Bootstarp 进度条</a>
+          </li>
+          <li>
+            <a href="../layout/media.html"><span class="fa fa-caret-right"></span>Bootstarp 多媒体对象</a>
+          </li>
+          <li>
+            <a href="../layout/listGroup.html"><span class="fa fa-caret-right"></span>Bootstarp 列表组</a>
+          </li>
+          <li>
+            <a href="../layout/panels.html"><span class="fa fa-caret-right"></span>Bootstarp 面板</a>
+          </li>
+          <li>
+            <a href="../layout/well.html"><span class="fa fa-caret-right"></span>Bootstarp Wells</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="javascript:;" class="nav-header collapsed" data-toggle="collapse" data-target="#plug-in">
+          <i class="fa fa-fw fa-list"></i>
+          Bootstrap 插件
+          <i class="fa fa-collapse"></i>
+        </a>
+        <ul id="plug-in" class="nav nav-list collapse">
+          <li>
+            <a href="../plug-in/overview.html"><span class="fa fa-caret-right"></span>Bootstarp 插件概览</a>
+          </li>
+          <li>
+            <a href="../plug-in/transition.html"><span class="fa fa-caret-right"></span>Bootstarp 过渡效果</a>
+          </li>
+          <li>
+            <a href="../plug-in/modal.html"><span class="fa fa-caret-right"></span>Bootstarp 模态框</a>
+          </li>
+          <li>
+            <a href="../plug-in/dropdown.html"><span class="fa fa-caret-right"></span>Bootstarp 下拉菜单</a>
+          </li>
+          <li>
+            <a href="../plug-in/scrollspy.html"><span class="fa fa-caret-right"></span>Bootstarp 滚动监听</a>
+          </li>
+          <li>
+            <a href="../plug-in/tab.html"><span class="fa fa-caret-right"></span>Bootstarp 标签页</a>
+          </li>
+          <li>
+            <a href="../plug-in/tooltip.html"><span class="fa fa-caret-right"></span>Bootstarp 提示工具</a>
+          </li>
+          <li>
+            <a href="../plug-in/popover.html"><span class="fa fa-caret-right"></span>Bootstarp 弹出框</a>
+          </li>
+          <li>
+            <a href="../plug-in/alert.html"><span class="fa fa-caret-right"></span>Bootstarp 警告框</a>
+          </li>
+          <li>
+            <a href="../plug-in/button.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮</a>
+          </li>
+          <li>
+            <a href="../plug-in/collapse.html"><span class="fa fa-caret-right"></span>Bootstarp 折叠</a>
+          </li>
+          <li>
+            <a href="../plug-in/carousel.html"><span class="fa fa-caret-right"></span>Bootstarp 轮播</a>
+          </li>
+          <li>
+            <a href="../plug-in/affix.html"><span class="fa fa-caret-right"></span>Bootstarp 附加导航</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="content">   
+    
+    <div class="panel panel-default">
+      <a href="#eg1" class="panel-heading" data-toggle="collapse">响应式的列重置</a>      
+      <div id="eg1" class="panel-collapse panel-body collapse in">
+        <div class="row" >
+          <div class="col-xs-6 col-sm-3" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>Bootstrap 包含了一个响应式的、移动设备优先的、不固定的网格系统，可以随着设备或视口大小的增加而适当地扩展到 12列。它包含了用于简单的布局选项的预定义类，也包含了用于生成更多语义布局的功能强大的混合类。</p>
+          </div>
+          <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>行必须放置在 .container class 内，以便获得适当的对齐（alignment）和内边距（padding）。</p> 
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-6 col-sm-3" style="background-color: #dedef8; box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>预定义的网格类，比如 .row 和 .col-xs-4，可用于快速创建网格布局。LESS 混合类可用于更多语义布局。</p>
+          </div>
+          <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>列通过内边距（padding）来创建列内容之间的间隙。该内边距是通过 .rows 上的外边距（margin）取负，表示第一列和最后一列的行偏移。</p>
+          </div>
+        </div>  
+        <p></p>
+        <a href="#code1" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code1" class="panel-collapse panel-body collapse">
+          <textarea class="form-control" rows="20"> 
+            <div class="row">
+              <div class="col-xs-6 col-sm-3" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>Bootstrap 包含了一个响应式的、移动设备优先的、不固定的网格系统，可以随着设备或视口大小的增加而适当地扩展到 12列。它包含了用于简单的布局选项的预定义类，也包含了用于生成更多语义布局的功能强大的混合类。</p>
+              </div>
+              <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>行必须放置在 .container class 内，以便获得适当的对齐（alignment）和内边距（padding）。</p> 
+              </div>
+              <div class="clearfix visible-xs"></div>
+              <div class="col-xs-6 col-sm-3" style="background-color: #dedef8; box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>预定义的网格类，比如 .row 和 .col-xs-4，可用于快速创建网格布局。LESS 混合类可用于更多语义布局。</p>
+              </div>
+              <div class="col-xs-6 col-sm-3" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>列通过内边距（padding）来创建列内容之间的间隙。该内边距是通过 .rows 上的外边距（margin）取负，表示第一列和最后一列的行偏移。</p>
+              </div>
+            </div>    
+          </textarea>
+        </div> <!--/#code1  -->       
+      </div> <!-- /#eg1 --> 
+    </div> <!-- /.panel --> 
+    
+    <div class="panel panel-default">
+      <a href="#eg2" class="panel-heading" data-toggle="collapse">偏移列</a>      
+      <div id="eg2" class="panel-collapse panel-body collapse in">
+        <div class="row" >
+          <div class="col-xs-6 col-md-offset-3" style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+            <p>偏移是一个用于更专业的布局的有用功能。它们可用来给列腾出更多的空间。例如，.col-xs=* 类不支持偏移，但是它们可以简单地通过使用一个空的单元格来实现该效果。为了在大屏幕显示器上使用偏移，请使用 .col-md-offset-* 类。</p>
+          </div> 
+        </div>  
+        <p></p>
+        <a href="#code2" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code2" class="panel-collapse panel-body collapse">    
+          <textarea class="form-control" rows="20"> 
+            <div class="row" >
+              <div class="col-xs-6 col-md-offset-3" style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                <p>偏移是一个用于更专业的布局的有用功能。它们可用来给列腾出更多的空间。例如，.col-xs=* 类不支持偏移，但是它们可以简单地通过使用一个空的单元格来实现该效果。为了在大屏幕显示器上使用偏移，请使用 .col-md-offset-* 类。</p>
+              </div> 
+            </div>                   
+          </textarea>        
+        </div> <!--/#code2 -->       
+      </div> <!-- /#eg2 -->     
+    </div> <!-- /.panel --> 
+    
+    <div class="panel panel-default">
+      <a href="#eg3" class="panel-heading" data-toggle="collapse">嵌套列</a>      
+      <div id="eg3" class="panel-collapse panel-body collapse in">
+        <div class="row">  
+          <div class="col-md-3" style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">  
+            <h4>第一列</h4>  
+            <p>媒体查询是非常别致的"有条件的 CSS 规则"。</p>  
+          </div>  
+          <div class="col-md-9" style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;">  
+            <h4>第二列 - 分为四个盒子</h4>  
+            <div class="row">  
+              <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">  
+                <p>Bootstrap 中的媒体查询允许您基于视口大小移动、显示并隐藏内容。</p>  
+              </div>  
+              <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">  
+                <p> 内容应该放置在列内，且唯有列可以是行的直接子元素。 </p>  
+              </div>  
+            </div>  
+            <div class="row">  
+              <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">  
+                <p>媒体查询有两个部分，先是一个设备规范，然后是一个大小规则。</p>  
+              </div>  
+              <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">  
+                <p>@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }</p>  
+              </div>  
+            </div>  
+          </div>  
+        </div>     
+        <p></p>
+        <a href="#code3" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code3" class="panel-collapse panel-body collapse">    
+          <textarea class="form-control" rows="20"> 
+            <div class="row"> 
+              <div class="col-md-3" style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> 
+                <h4>第一列</h4> 
+                <p>媒体查询是非常别致的"有条件的 CSS 规则"。</p> 
+              </div> 
+              <div class="col-md-9" style="background-color: #dedef8;box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> 
+                <h4>第二列 - 分为四个盒子</h4> 
+                <div class="row"> 
+                  <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> 
+                    <p>Bootstrap 中的媒体查询允许您基于视口大小移动、显示并隐藏内容。</p> 
+                  </div> 
+                  <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> 
+                    <p> 内容应该放置在列内，且唯有列可以是行的直接子元素。 </p> 
+                  </div> 
+                </div> 
+                <div class="row"> 
+                  <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> 
+                    <p>媒体查询有两个部分，先是一个设备规范，然后是一个大小规则。</p> 
+                  </div> 
+                  <div class="col-md-6" style="background-color: #B18904;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;"> 
+                    <p>@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }</p> 
+                  </div> 
+                </div> 
+              </div> 
+            </div>       
+          </textarea>         
+        </div> <!--/#code3 -->       
+      </div> <!-- /#eg3 -->    
+    </div> <!-- /.panel -->
+    
+    <div class="panel panel-default">
+      <a href="#eg4" class="panel-heading" data-toggle="collapse">列排序</a>      
+      <div id="eg4" class="panel-collapse panel-body collapse in">
+        <div class="row">
+          <p>排序前</p>
+          <div class="col-md-4" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">我在左边</div>
+          <div class="col-md-8" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">我在右边</div>
+   	    </div> 
+        <div class="row">
+          <p>排序后</p>
+          <div class="col-md-4 col-md-push-8" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444;">我在左边</div>
+          <div class="col-md-8 col-md-pull-4" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444;">我在右边</div>
+        </div>
+        <p></p>
+        <a href="#code4" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code4" class="panel-collapse panel-body collapse">    
+          <textarea class="form-control" rows="20"> 
+            <div class="row">
+              <p>排序前</p>
+              <div class="col-md-4" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">我在左边</div>
+              <div class="col-md-8" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">我在右边</div>
+            </div> 
+            <div class="row">
+              <p>排序后</p>
+              <div class="col-md-4 col-md-push-8" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444;">我在左边</div>
+              <div class="col-md-8 col-md-pull-4" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444,inset -1px 1px 1px #444;">我在右边</div>
+            </div>                 
+          </textarea>         
+        </div> <!--/#code4 -->       
+      </div> <!-- /#eg4 -->    
+    </div> <!-- /.panel --> 
+    
+  </div> <!-- /.content -->
+   
+</body>
+</html>

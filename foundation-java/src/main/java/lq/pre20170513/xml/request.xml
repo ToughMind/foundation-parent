@@ -1,0 +1,41 @@
+
+<xml>
+    <message>
+		<hd>
+			<code>1</code>
+			<desc>请求成功</desc>
+			<pid>935</pid>
+		</hd>
+		<alipay>
+			<respcode>T</respcode>
+			<respmessage>退款成功</respmessage>
+		</alipay>
+		<result> 
+	</message>
+	<message>
+		<hd>
+			<code>1</code>
+			<desc>请求成功</desc>
+			<pid>935</pid>
+		</hd>
+		<alipay>
+			<respcode>F</respcode>
+			<respmessage>退款失败</respmessage>
+		</alipay>
+		<result> 
+	</message>
+	<message>
+		<hd>
+			<code>1</code>
+			<desc>请求失败</desc>
+			<pid>910</pid>
+		</hd>
+		<alipay>
+			<respcode>F</respcode>
+			<respmessage>退款失败</respmessage>
+		</alipay>
+		<result> 
+	</message>
+	
+</xml>	
+	

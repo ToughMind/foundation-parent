@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="刘泉">
+
+  <title>Bootstrap 警告</title>
+
+  <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../stylesheets/theme.css">
+  <link rel="stylesheet" type="text/css" href="../../lib/font-awesome/css/font-awesome.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- jQuery -->
+  <script src="../../lib/jquery-1.11.1.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body class="theme-blue">
+  <style type="text/css">
+    .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+      color: #fff;
+    }
+  </style>
+
+  <div class="navbar navbar-default" role="navigation">    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">bootstrap控件</a>
+    </div>  
+    <!-- Top Menu Items -->
+    <div class="navbar-collapse collapse" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i>
+            liuquan
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">
+                <i class="fa fa-fw fa-user"></i>
+                LOGIN OUT
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>    
+  </div>
+
+  <div class="sidebar-nav">
+    <ul>
+      <li>
+        <a href="javascript:;" class="nav-header collapsed" data-toggle="collapse" data-target="#css">
+          <i class="fa fa-fw fa-list"></i>
+          Bootstrap CSS
+          <i class="fa fa-collapse"></i>
+        </a>
+      </li>
+      <li>
+        <ul id="css" class="nav nav-list collapse">
+          <li>
+            <a href="../css/gridSystem.html"><span class="fa fa-caret-right"></span>Bootstarp 网格系统</a>
+          </li>
+          <li>
+            <a href="../css/layout.html"><span class="fa fa-caret-right"></span>Bootstarp 排版</a>
+          </li>
+          <li>
+            <a href="../css/code.html"><span class="fa fa-caret-right"></span>Bootstarp 代码</a>
+          </li>
+          <li>
+            <a href="../css/table.html"><span class="fa fa-caret-right"></span>Bootstarp 表格</a>
+          </li>
+          <li>
+            <a href="../css/form.html"><span class="fa fa-caret-right"></span>Bootstarp 表单</a>
+          </li>
+          <li>
+            <a href="../css/button.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮</a>
+          </li>
+          <li>
+            <a href="../css/picture.html"><span class="fa fa-caret-right"></span>Bootstarp 图片</a>
+          </li>
+          <li>
+            <a href="../css/assist.html"><span class="fa fa-caret-right"></span>Bootstarp 辅助类</a>
+          </li>
+          <li>
+            <a href="../css/responsiveTool.html"><span class="fa fa-caret-right"></span>Bootstarp 响应式实用工具</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="javascript:;" class="nav-header" data-toggle="collapse" data-target="#layout">
+          <i class="fa fa-fw fa-list"></i>
+          Bootstrap 布局组件
+          <i class="fa fa-collapse"></i>
+        </a>
+        <ul id="layout" class="nav nav-list collapse in">
+          <li>
+            <a href="../layout/font.html"><span class="fa fa-caret-right"></span>Bootstarp 字体图标</a>
+          </li>
+          <li>
+            <a href="../layout/dropdown.html"><span class="fa fa-caret-right"></span>Bootstarp 下拉菜单</a>
+          </li>
+          <li>
+            <a href="../layout/button.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮组</a>
+          </li>
+          <li>
+            <a href="../layout/buttonDropdown.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮下拉菜单</a>
+          </li>
+          <li>
+            <a href="../layout/input.html"><span class="fa fa-caret-right"></span>Bootstarp 输入框组</a>
+          </li>
+          <li>
+            <a href="../layout/navElement.html"><span class="fa fa-caret-right"></span>Bootstarp 导航元素</a>
+          </li>
+          <li>
+            <a href="../layout/navbar.html"><span class="fa fa-caret-right"></span>Bootstarp 导航栏</a>
+          </li>
+          <li>
+            <a href="../layout/breadcrumbs.html"><span class="fa fa-caret-right"></span>Bootstarp 面包屑导航</a>
+          </li>
+          <li>
+            <a href="../layout/pagination.html"><span class="fa fa-caret-right"></span>Bootstarp 分页</a>
+          </li>
+          <li>
+            <a href="../layout/label.html"><span class="fa fa-caret-right"></span>Bootstarp 标签</a>
+          </li>
+          <li>
+            <a href="../layout/badges.html"><span class="fa fa-caret-right"></span>Bootstarp 徽章</a>
+          </li>
+          <li>
+            <a href="../layout/jumbotron.html"><span class="fa fa-caret-right"></span>Bootstarp 超大屏幕</a>
+          </li>
+          <li>
+            <a href="../layout/pageHeader.html"><span class="fa fa-caret-right"></span>Bootstarp 页面标题</a>
+          </li>
+          <li>
+            <a href="../layout/thumbnail.html"><span class="fa fa-caret-right"></span>Bootstarp 缩略图</a>
+          </li>
+          <li>
+            <a href="../layout/alerts.html"><span class="fa fa-caret-right"></span>Bootstarp 警告</a>
+          </li>
+          <li>
+            <a href="../layout/progress.html"><span class="fa fa-caret-right"></span>Bootstarp 进度条</a>
+          </li>
+          <li>
+            <a href="../layout/media.html"><span class="fa fa-caret-right"></span>Bootstarp 多媒体对象</a>
+          </li>
+          <li>
+            <a href="../layout/listGroup.html"><span class="fa fa-caret-right"></span>Bootstarp 列表组</a>
+          </li>
+          <li>
+            <a href="../layout/panels.html"><span class="fa fa-caret-right"></span>Bootstarp 面板</a>
+          </li>
+          <li>
+            <a href="../layout/well.html"><span class="fa fa-caret-right"></span>Bootstarp Wells</a>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="javascript:;" class="nav-header collapsed" data-toggle="collapse" data-target="#plug-in">
+          <i class="fa fa-fw fa-list"></i>
+          Bootstrap 插件
+          <i class="fa fa-collapse"></i>
+        </a>
+        <ul id="plug-in" class="nav nav-list collapse">
+          <li>
+            <a href="../plug-in/overview.html"><span class="fa fa-caret-right"></span>Bootstarp 插件概览</a>
+          </li>
+          <li>
+            <a href="../plug-in/transition.html"><span class="fa fa-caret-right"></span>Bootstarp 过渡效果</a>
+          </li>
+          <li>
+            <a href="../plug-in/modal.html"><span class="fa fa-caret-right"></span>Bootstarp 模态框</a>
+          </li>
+          <li>
+            <a href="../plug-in/dropdown.html"><span class="fa fa-caret-right"></span>Bootstarp 下拉菜单</a>
+          </li>
+          <li>
+            <a href="../plug-in/scrollspy.html"><span class="fa fa-caret-right"></span>Bootstarp 滚动监听</a>
+          </li>
+          <li>
+            <a href="../plug-in/tab.html"><span class="fa fa-caret-right"></span>Bootstarp 标签页</a>
+          </li>
+          <li>
+            <a href="../plug-in/tooltip.html"><span class="fa fa-caret-right"></span>Bootstarp 提示工具</a>
+          </li>
+          <li>
+            <a href="../plug-in/popover.html"><span class="fa fa-caret-right"></span>Bootstarp 弹出框</a>
+          </li>
+          <li>
+            <a href="../plug-in/alert.html"><span class="fa fa-caret-right"></span>Bootstarp 警告框</a>
+          </li>
+          <li>
+            <a href="../plug-in/button.html"><span class="fa fa-caret-right"></span>Bootstarp 按钮</a>
+          </li>
+          <li>
+            <a href="../plug-in/collapse.html"><span class="fa fa-caret-right"></span>Bootstarp 折叠</a>
+          </li>
+          <li>
+            <a href="../plug-in/carousel.html"><span class="fa fa-caret-right"></span>Bootstarp 轮播</a>
+          </li>
+          <li>
+            <a href="../plug-in/affix.html"><span class="fa fa-caret-right"></span>Bootstarp 附加导航</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">     
+    <div class="panel panel-default">
+      <a href="#eg1" class="panel-heading" data-toggle="collapse">四个上下文警告</a>      
+      <div id="eg1" class="panel-collapse panel-body collapse in">
+        <div class="alert alert-success">成功！很好地完成了提交。</div>
+        <div class="alert alert-info">信息！请注意这个信息。</div>
+        <div class="alert alert-warning">警告！请不要提交。</div>
+        <div class="alert alert-danger">错误！请进行一些更改。</div>  
+        <p></p>
+        <a href="#code1" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code1" class="panel-collapse panel-body collapse">    
+          <textarea class="form-control" rows="20"> 
+            <div class="alert alert-success">成功！很好地完成了提交。</div>
+            <div class="alert alert-info">信息！请注意这个信息。</div>
+            <div class="alert alert-warning">警告！请不要提交。</div>
+            <div class="alert alert-danger">错误！请进行一些更改。</div>            
+          </textarea>         
+        </div> <!--/#code1 -->       
+      </div> <!-- /#eg1 -->    
+    </div> <!-- /.panel -->  
+    
+    <div class="panel panel-default">
+      <a href="#eg2" class="panel-heading" data-toggle="collapse">可取消的警告</a>      
+      <div id="eg2" class="panel-collapse panel-body collapse in">
+        <div class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+          </button> 成功！很好地完成了提交。
+        </div>
+        <div class="alert alert-info alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+          </button>信息！请注意这个信息。
+        </div>
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+          </button>警告！请不要提交。
+        </div>
+        <div class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+            &times;
+          </button>错误！请进行一些更改。
+        </div>  
+        <p></p>
+        <a href="#code2" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code2" class="panel-collapse panel-body collapse">    
+          <textarea class="form-control" rows="20"> 
+            <div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                &times;
+              </button> 成功！很好地完成了提交。
+            </div>
+            <div class="alert alert-info alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                &times;
+              </button>信息！请注意这个信息。
+            </div>
+            <div class="alert alert-warning alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                &times;
+              </button>警告！请不要提交。
+            </div>
+            <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                &times;
+              </button>错误！请进行一些更改。
+            </div>            
+          </textarea>         
+        </div> <!--/#code2 -->       
+      </div> <!-- /#eg2 -->    
+    </div> <!-- /.panel -->  
+    
+    <div class="panel panel-default">
+      <a href="#eg3" class="panel-heading" data-toggle="collapse">警告中的链接</a>      
+      <div id="eg3" class="panel-collapse panel-body collapse in">
+        <div class="alert alert-success">
+          <a href="#" class="alert-link">成功！很好地完成了提交。</a>
+        </div>
+        <div class="alert alert-info">
+          <a href="#" class="alert-link">信息！请注意这个信息。</a>
+        </div>
+        <div class="alert alert-warning">
+          <a href="#" class="alert-link">警告！请不要提交。</a>
+        </div>
+        <div class="alert alert-danger">
+          <a href="#" class="alert-link">错误！请进行一些更改。</a>
+        </div>  
+        <p></p>
+        <a href="#code3" class="btn btn-link btn-block"  data-toggle="collapse">源代码</a>    
+        <div id="code3" class="panel-collapse panel-body collapse">    
+          <textarea class="form-control" rows="20"> 
+            <div class="alert alert-success">
+              <a href="#" class="alert-link">成功！很好地完成了提交。</a>
+            </div>
+            <div class="alert alert-info">
+              <a href="#" class="alert-link">信息！请注意这个信息。</a>
+            </div>
+            <div class="alert alert-warning">
+              <a href="#" class="alert-link">警告！请不要提交。</a>
+            </div>
+            <div class="alert alert-danger">
+              <a href="#" class="alert-link">错误！请进行一些更改。</a>
+            </div>           
+          </textarea>         
+        </div> <!--/#code3 -->       
+      </div> <!-- /#eg3 -->    
+    </div> <!-- /.panel -->  
+    
+  </div> <!-- /.content -->
+   
+</body>
+</html>
