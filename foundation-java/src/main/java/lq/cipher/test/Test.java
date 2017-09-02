@@ -1,8 +1,8 @@
 package lq.cipher.test;
 
-import util.AESUtils;
-import util.HttpUtils;
-import util.RSAUtils;
+//import util.AESUtils;
+//import util.HttpUtils;
+//import util.RSAUtils;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -14,7 +14,7 @@ public class Test {
 	private static final String URL2 = "http://localhost:8080/test/ServerServlet2";
 	private static final String URL3 = "http://localhost:8080/test/ServerServlet3";
 	
-	public static void main(String[] args) throws IOException, Exception {
+	/*public static void main(String[] args) throws IOException, Exception {
 		System.out.println("----------------AES实例");
 		StringBuilder sb= new StringBuilder();
 		sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"\r\n");
@@ -35,10 +35,10 @@ public class Test {
 		System.out.println("得到响应的数据是" + new String(input));
 		
 		
-		/*下面这个例子是用RSA加密秘密密钥，这里用哪种秘密密钥的算法是双方商量好了的。其实就是在上面例子中加了一步骤，
+		*//*下面这个例子是用RSA加密秘密密钥，这里用哪种秘密密钥的算法是双方商量好了的。其实就是在上面例子中加了一步骤，
 		上面的例子是这里作为发送者，秘密密钥是双方都有的；而下面这个例子，这里作为接收者，接收者存有RSA公钥，发送者那端有私钥，
 		这时候的秘密密钥双方还不知道，只是规定了算法，这样这边用公钥加密密钥然后传到发送者那边（其实就是秘密密钥每次都重新生成，不是定值），
-		然后发送者那边用RSA私钥解密得到秘密密钥编码，然后就可以用秘密密钥加密真正的内容数据了.*/
+		然后发送者那边用RSA私钥解密得到秘密密钥编码，然后就可以用秘密密钥加密真正的内容数据了.*//*
 		
 		//下面这个例子就是用公钥加密秘密密钥 然后传到（发送者端），发送者端再用私钥解密得到秘密密钥，然后就可以用秘密密钥加密数据了。
 		System.out.println("\n----------------RSA结合AES实例");
@@ -61,5 +61,5 @@ public class Test {
 		String realData = new String(input3).substring(128);
 		System.out.println("得到相应数据的签名\t" + sign);
 		System.out.println("得到相应数据的真正内容\t" + realData);
-	}
+	}*/
 }

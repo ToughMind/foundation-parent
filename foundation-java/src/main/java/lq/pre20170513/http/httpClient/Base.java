@@ -43,15 +43,15 @@ import java.util.List;
  * @author liuquan
  * @date  2015年12月10日
  */
-public class Base {
-	/**@description 
+/*public class Base {
+	*//**@description
 	 * @param args
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 * @author liuquan
 	 * @throws URISyntaxException 
 	 * @date  2015年12月9日
-	 */
+	 *//*
 	public static void main(String[] args) throws ClientProtocolException,
 			IOException, URISyntaxException {
 				
@@ -85,12 +85,12 @@ public class Base {
 	}
 	
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description HTTP参数bean的设置
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f9() {
 		HttpParams params = new BasicHttpParams();
 		HttpProtocolParamBean paramsBean = new	HttpProtocolParamBean(params);
@@ -106,12 +106,12 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 动态生成内容实体  发送post或者get请求时建立
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f8() throws ParseException, IOException {
 		ContentProducer cp = new ContentProducer() {
 			public void writeTo(OutputStream outstream) throws IOException {
@@ -131,12 +131,12 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 对response操作 增加报头  如Cookie
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f7() {		
 		HttpResponse response = new BasicHttpResponse(HttpVersion.HTTP_1_1, HttpStatus.SC_OK, "OK");
 		response.addHeader("Cookie","a=java;b=/;c=goodJava");
@@ -168,12 +168,12 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 请求重试处理器
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f6() throws ClientProtocolException, IOException {
 		HttpRequestRetryHandler myRetryHandler = new HttpRequestRetryHandler() { 
 			@Override
@@ -206,12 +206,12 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 响应控制器 ResponseHandler
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f5() throws ClientProtocolException, IOException {
 		ResponseHandler<byte[]> handler = new ResponseHandler<byte[]>() { 
 			@Override
@@ -232,12 +232,12 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description POST创建entity 请求参数封装到list 
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f4() throws ParseException, IOException {
 		List<NameValuePair>  paramsList = new ArrayList<NameValuePair>();
 		paramsList.add(new BasicNameValuePair("pid", "900"));
@@ -250,12 +250,12 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 设置http上下文
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f3() throws ClientProtocolException, IOException {
 		HttpClient httpclient = new DefaultHttpClient(); 
 		HttpGet httpget = new HttpGet("http://localhost:8080/test/CnpTxnMsgQueryServlet?pid=900&orderid=152040949998160&channeltype=1");
@@ -271,14 +271,14 @@ public class Base {
 	}
 	
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 关于请求uri 和发送get 读取response	
 	 * @throws URISyntaxException
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f2() throws URISyntaxException, ClientProtocolException, IOException {
 		HttpClient httpclient = new DefaultHttpClient(); 
 		//URI可以编程拼装 GET
@@ -318,12 +318,12 @@ public class Base {
 	}
  
 	@SuppressWarnings("deprecation")
-	/**
+	*//**
 	 * @description 参数+拦截器
 	 * 
 	 * @author liuquan
 	 * @date  2015年12月10日
-	 */
+	 *//*
 	private static void f1() throws ClientProtocolException, IOException {		
 		DefaultHttpClient httpclient = new DefaultHttpClient();
 		httpclient.getParams().setParameter(CoreProtocolPNames.PROTOCOL_VERSION,HttpVersion.HTTP_1_0);
@@ -342,5 +342,5 @@ public class Base {
 		}); 
 	} 	
 
-}
+}*/
 

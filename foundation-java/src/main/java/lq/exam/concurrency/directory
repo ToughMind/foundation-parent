@@ -1,0 +1,4 @@
+Test1：有A、B、C三个线程，要求同时启动三个线程，按顺序执行ABC。（利用join方法实现）
+Test2：有A、B、C三个线程，要求同时启动三个线程，按顺序执行ABC，循环10次。（ReentrantLock）
+Test3：有A、B、C三个线程，要求同时启动三个线程，按顺序执行ABC，循环10次。（Condition）
+Test4：有A、B、C三个线程，要求同时启动三个线程，按顺序执行ABC，循环10次。（Semaphore）

@@ -1,4 +1,6 @@
-package lq.data_structure.Search;
+import lq.data_structure.Search.BSTree;
+import lq.data_structure.Search.Search;
+import lq.data_structure.Sort.Sort;
 
 public class Test {
 	

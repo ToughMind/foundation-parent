@@ -1,6 +1,7 @@
 package lq.data_structure.Graph;
 
-import Queue.LinkQueue;
+
+import lq.data_structure.Queue.LinkQueue;
 
 /**
  * @description 图的遍历(广度优先搜索 + 深度优先搜索) 

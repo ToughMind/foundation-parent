@@ -1,7 +1,7 @@
 package lq.data_structure.BiTree;
 
-import Queue.LinkQueue;
-import Stack.LinkStack;
+import lq.data_structure.Queue.LinkQueue;
+import lq.data_structure.Stack.LinkStack;
 
 /**
  * @Description 链式二叉树的存储结点
@@ -177,7 +177,7 @@ public class BiTree {
 		BiTreeNode T = root;
 		if (T != null) {			
 			// 构造一个栈 存放临时数据
-			LinkStack s = new LinkStack(); 
+			LinkStack s = new LinkStack();
 			s.push(T);
 			while (!s.isEmpty()) {
 				T = (BiTreeNode) s.pop();

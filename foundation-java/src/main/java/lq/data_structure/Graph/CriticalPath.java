@@ -1,6 +1,7 @@
 package lq.data_structure.Graph;
 
-import Stack.LinkStack;
+
+import lq.data_structure.Stack.LinkStack;
 
 /**
  * @Description AOE网的关键路径 
